@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model - Web School</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="lesson-page">
+        <div id="sidebar-container"></div>
+
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h1>The CSS Box Model</h1>
+                <p>Understand how every element on a web page is a box with margins, borders, padding, and content.</p>
+            </div>
+
+            <section>
+                <h2>What is the Box Model?</h2>
+                <p>The CSS box model describes the boxes which wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.</p>
+                <p>Understanding the box model is fundamental to controlling spacing and layout on web pages.</p>
+            </section>
+
+            <section>
+                <h2>Box Model Components</h2>
+                <p>From inside to outside, the box model consists of:</p>
+
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Content</td>
+                        <td>The actual text, images, or other content</td>
+                        <td>Content text here</td>
+                    </tr>
+                    <tr>
+                        <td>Padding</td>
+                        <td>Space inside the border, around content</td>
+                        <td>padding: 20px;</td>
+                    </tr>
+                    <tr>
+                        <td>Border</td>
+                        <td>Line around padding</td>
+                        <td>border: 2px solid black;</td>
+                    </tr>
+                    <tr>
+                        <td>Margin</td>
+                        <td>Space outside the border</td>
+                        <td>margin: 10px;</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Visualizing the Box Model</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Box Model Visualization</div>
+                    <div class="example-code">
+                        <code>.box {
+    content: "Hello";
+    padding: 20px;
+    border: 3px solid blue;
+    margin: 30px;
+}</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <div style="background: #ddd; padding: 30px; text-align: center; font-size: 12px; font-weight: bold; color: #666;">
+                                <span style="display: block; margin-bottom: 5px;">margin: 30px</span>
+                                <div style="background: #ccc; padding: 5px;">
+                                    border: 3px solid blue
+                                    <div style="background: white; padding: 20px; border: 3px solid blue; color: #333;">
+                                        <strong>Content</strong>
+                                        <div style="margin-top: 10px; font-size: 11px;">padding: 20px</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Padding</h2>
+                <p>Padding creates space inside an element, between the content and the border.</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Padding Property</div>
+                    <div class="example-code">
+                        <code>/* All sides */
+.box1 {
+    padding: 20px;
+}
+
+/* Vertical | Horizontal */
+.box2 {
+    padding: 10px 20px;
+}
+
+/* Top | Right | Bottom | Left */
+.box3 {
+    padding: 10px 15px 20px 5px;
+}
+
+/* Individual sides */
+.box4 {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+}</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <div style="background: #f0f0f0; padding: 20px; border: 2px solid #667eea; margin-bottom: 15px;">
+                                <strong>20px padding on all sides</strong>
+                                <p style="margin: 0; color: #666;">Content with equal padding</p>
+                            </div>
+                            <div style="background: #f0f0f0; padding: 10px 20px; border: 2px solid #667eea;">
+                                <strong>10px vertical, 20px horizontal</strong>
+                                <p style="margin: 0; color: #666;">Content with different padding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Margin</h2>
+                <p>Margin creates space outside an element, outside the border. It creates distance between this element and others.</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Margin Property</div>
+                    <div class="example-code">
+                        <code>/* All sides */
+.box1 {
+    margin: 20px;
+}
+
+/* Vertical | Horizontal */
+.box2 {
+    margin: 10px 20px;
+}
+
+/* Center element horizontally */
+.box3 {
+    width: 200px;
+    margin: 0 auto;
+}</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <div style="background: #f0f0f0; margin: 20px 0; padding: 15px; border: 2px solid #667eea;">
+                                <strong>Element with 20px margin</strong>
+                                <p style="margin: 0; color: #666;">Notice the space around this element</p>
+                            </div>
+                            <div style="background: #f0f0f0; margin: 20px 0; padding: 15px; border: 2px solid #667eea;">
+                                <strong>Another element</strong>
+                                <p style="margin: 0; color: #666;">There's space between the elements</p>
+                            </div>
+                            <div style="width: 200px; margin: 20px auto; padding: 15px; border: 2px solid #667eea; text-align: center;">
+                                <strong>Centered element</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Border</h2>
+                <p>The border property adds a border around an element.</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Border Properties</div>
+                    <div class="example-code">
+                        <code>/* Shorthand */
+.box1 {
+    border: 2px solid black;
+}
+
+/* Individual sides */
+.box2 {
+    border-top: 5px solid red;
+    border-right: 3px solid green;
+    border-bottom: 5px solid blue;
+    border-left: 3px solid orange;
+}
+
+/* Rounded corners */
+.box3 {
+    border: 2px solid gray;
+    border-radius: 10px;
+}</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <div style="padding: 15px; border: 2px solid black; margin-bottom: 15px;">
+                                Solid black border
+                            </div>
+                            <div style="padding: 15px; border-top: 5px solid red; border-right: 3px solid green; border-bottom: 5px solid blue; border-left: 3px solid orange; margin-bottom: 15px;">
+                                Different colored borders on each side
+                            </div>
+                            <div style="padding: 15px; border: 2px solid gray; border-radius: 10px;">
+                                Rounded corners with border-radius
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Complete Box Model Example</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Complete Box Model Demonstration</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        .card {
+            width: 300px;
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border: 3px solid #667eea;
+            border-radius: 12px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .card p {
+            margin: 10px 0;
+            color: #666;
+            line-height: 1.6;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="card"&gt;
+        &lt;h2&gt;Beautiful Card&lt;/h2&gt;
+        &lt;p&gt;This demonstrates the complete box model with margin, border, and padding working together.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: #f5f5f5; color: #333; padding: 20px; border-radius: 6px;">
+                            <div style="width: 300px; background: white; margin: 0 auto; padding: 20px; border: 3px solid #667eea; border-radius: 12px;">
+                                <h2 style="margin-top: 0; color: #333;">Beautiful Card</h2>
+                                <p style="margin: 10px 0; color: #666; line-height: 1.6;">This demonstrates the complete box model with margin, border, and padding working together.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>Every element is a box with content, padding, border, and margin</li>
+                    <li>Padding is inside the border, margin is outside</li>
+                    <li>Padding and margin can be set on all sides or individually</li>
+                    <li>Borders provide visual boundaries for elements</li>
+                    <li>Understanding the box model is essential for layout control</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="/pages/css/intro.html" class="nav-btn">← Previous</a>
+                <span class="nav-center">Lesson 2 of 5</span>
+                <a href="/pages/css/flexbox.html" class="nav-btn">Next →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/progress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) {
+                fetch('/components/sidebar-css.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        sidebarContainer.innerHTML = html;
+                        document.querySelector('.sidebar a[href="/pages/css/boxmodel.html"]').classList.add('active');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

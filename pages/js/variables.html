@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables - Web School</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="lesson-page">
+        <div id="sidebar-container"></div>
+
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h1>JavaScript Variables & Data Types</h1>
+                <p>Learn how to store and work with data in JavaScript.</p>
+            </div>
+
+            <section>
+                <h2>What are Variables?</h2>
+                <p>Variables are containers for storing data values. You use variables to store information that you want to use later in your program. Think of a variable like a labeled box where you can store different types of information.</p>
+            </section>
+
+            <section>
+                <h2>Declaring Variables</h2>
+                <p>In JavaScript, you can declare variables using let, const, or var:</p>
+
+                <table>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Purpose</th>
+                        <th>Use Case</th>
+                    </tr>
+                    <tr>
+                        <td>let</td>
+                        <td>Block-scoped variable (preferred)</td>
+                        <td>Most modern JavaScript code</td>
+                    </tr>
+                    <tr>
+                        <td>const</td>
+                        <td>Block-scoped constant (cannot be changed)</td>
+                        <td>Values that shouldn't change</td>
+                    </tr>
+                    <tr>
+                        <td>var</td>
+                        <td>Function-scoped variable (older style)</td>
+                        <td>Legacy code (avoid in new code)</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Using Variables</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Declaring and Using Variables</div>
+                    <div class="example-code">
+                        <code>// Using let to declare a variable
+let name = "Alice";
+let age = 30;
+let score = 95.5;
+
+// Using const for values that don't change
+const PI = 3.14159;
+const country = "USA";
+
+// Display variables
+console.log(name);        // Output: Alice
+console.log(age);         // Output: 30
+console.log("Score: " + score);  // Output: Score: 95.5
+
+// Change variable value
+age = 31;
+console.log(age);         // Output: 31
+
+// Try to change const (this will cause an error)
+// PI = 3.14;  // Error: Assignment to constant variable</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output (in console):</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px;">
+                            <p style="margin: 5px 0;">Alice</p>
+                            <p style="margin: 5px 0;">30</p>
+                            <p style="margin: 5px 0;">Score: 95.5</p>
+                            <p style="margin: 5px 0;">31</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Data Types</h2>
+                <p>JavaScript has several data types you can work with:</p>
+
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>String</td>
+                        <td>Text enclosed in quotes</td>
+                        <td>"Hello" or 'World'</td>
+                    </tr>
+                    <tr>
+                        <td>Number</td>
+                        <td>Integers or decimals</td>
+                        <td>42 or 3.14</td>
+                    </tr>
+                    <tr>
+                        <td>Boolean</td>
+                        <td>true or false</td>
+                        <td>true or false</td>
+                    </tr>
+                    <tr>
+                        <td>Array</td>
+                        <td>List of values</td>
+                        <td>[1, 2, 3]</td>
+                    </tr>
+                    <tr>
+                        <td>Object</td>
+                        <td>Collection of key-value pairs</td>
+                        <td>{name: "John"}</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Working with Different Data Types</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Different Data Types</div>
+                    <div class="example-code">
+                        <code>// String
+let firstName = "John";
+let lastName = "Doe";
+let fullName = firstName + " " + lastName;
+console.log(fullName);  // Output: John Doe
+
+// Number
+let x = 10;
+let y = 20;
+let sum = x + y;
+console.log(sum);       // Output: 30
+
+// Boolean
+let isStudent = true;
+let isTeacher = false;
+console.log(isStudent); // Output: true
+
+// Array
+let fruits = ["apple", "banana", "orange"];
+console.log(fruits[0]); // Output: apple
+console.log(fruits.length); // Output: 3
+
+// Object
+let person = {
+    name: "Alice",
+    age: 25,
+    city: "New York"
+};
+console.log(person.name); // Output: Alice</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output (in console):</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px;">
+                            <p style="margin: 5px 0;">John Doe</p>
+                            <p style="margin: 5px 0;">30</p>
+                            <p style="margin: 5px 0;">true</p>
+                            <p style="margin: 5px 0;">apple</p>
+                            <p style="margin: 5px 0;">3</p>
+                            <p style="margin: 5px 0;">Alice</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Interactive Variable Example</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Interactive Variables in HTML</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h2&gt;Variable Calculator&lt;/h2&gt;
+    &lt;input type="number" id="num1" placeholder="Number 1"&gt;
+    &lt;input type="number" id="num2" placeholder="Number 2"&gt;
+    &lt;button onclick="calculate()"&gt;Calculate&lt;/button&gt;
+    &lt;p id="result"&gt;&lt;/p&gt;
+
+    &lt;script&gt;
+        function calculate() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+            let result = number1 + number2;
+            document.getElementById("result").innerHTML = 
+                number1 + " + " + number2 + " = " + result;
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <h3 style="margin-top: 0;">Variable Calculator</h3>
+                            <input type="number" placeholder="Number 1" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 10px; width: 100%; max-width: 200px; display: block;">
+                            <input type="number" placeholder="Number 2" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 10px; width: 100%; max-width: 200px; display: block;">
+                            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 8px 20px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 15px;">Calculate</button>
+                            <p style="color: #666; font-size: 14px;">Enter numbers and click Calculate to see results</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>Variables are containers for storing data</li>
+                    <li>Use let and const for declaring variables (prefer const for constants)</li>
+                    <li>JavaScript has several data types: string, number, boolean, array, object</li>
+                    <li>You can change variable values after declaring them (except const)</li>
+                    <li>Variables make your code more flexible and reusable</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="/pages/js/intro.html" class="nav-btn">← Previous</a>
+                <span class="nav-center">Lesson 2 of 5</span>
+                <a href="/pages/js/functions.html" class="nav-btn">Next →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/progress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) {
+                fetch('/components/sidebar-js.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        sidebarContainer.innerHTML = html;
+                        document.querySelector('.sidebar a[href="/pages/js/variables.html"]').classList.add('active');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

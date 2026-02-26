@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms - Web School</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="lesson-page">
+        <div id="sidebar-container"></div>
+
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h1>HTML Forms</h1>
+                <p>Learn how to create interactive forms to collect user input.</p>
+            </div>
+
+            <section>
+                <h2>What are Forms?</h2>
+                <p>Forms are used to collect data from users. They include input fields, buttons, checkboxes, radio buttons, and more. The &lt;form&gt; element wraps all form elements together.</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Basic Form</div>
+                    <div class="example-code">
+                        <code>&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <form style="max-width: 400px;">
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px;">Name:</label>
+                                    <input type="text" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" placeholder="Enter your name">
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px;">Email:</label>
+                                    <input type="email" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" placeholder="Enter your email">
+                                </div>
+                                <button type="submit" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 30px; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Input Types</h2>
+                <p>The &lt;input&gt; element supports many different types for various data:</p>
+
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>text</td>
+                        <td>Single line text input</td>
+                        <td>&lt;input type="text"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>Email address input</td>
+                        <td>&lt;input type="email"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>Password (masked)</td>
+                        <td>&lt;input type="password"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>number</td>
+                        <td>Numeric input</td>
+                        <td>&lt;input type="number"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>checkbox</td>
+                        <td>Multiple choice selection</td>
+                        <td>&lt;input type="checkbox"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>radio</td>
+                        <td>Single choice selection</td>
+                        <td>&lt;input type="radio"&gt;</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Form Elements</h2>
+                <p>Here are common form elements beyond basic input types:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Various Form Elements</div>
+                    <div class="example-code">
+                        <code>&lt;form&gt;
+    &lt;!-- Text input --&gt;
+    &lt;input type="text" placeholder="Enter text"&gt;
+    
+    &lt;!-- Textarea for multiple lines --&gt;
+    &lt;textarea rows="4"&gt;&lt;/textarea&gt;
+    
+    &lt;!-- Dropdown select --&gt;
+    &lt;select&gt;
+        &lt;option&gt;Choose an option&lt;/option&gt;
+        &lt;option&gt;Option 1&lt;/option&gt;
+        &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;/select&gt;
+    
+    &lt;!-- Checkboxes --&gt;
+    &lt;input type="checkbox"&gt; Option 1
+    &lt;input type="checkbox"&gt; Option 2
+    
+    &lt;!-- Radio buttons --&gt;
+    &lt;input type="radio" name="choice"&gt; Choice 1
+    &lt;input type="radio" name="choice"&gt; Choice 2
+    
+    &lt;!-- Button --&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <form style="max-width: 400px;">
+                                <div style="margin-bottom: 15px;">
+                                    <input type="text" placeholder="Enter text" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <textarea rows="4" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <select style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                                        <option>Choose an option</option>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                    </select>
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <div><input type="checkbox"> Option 1</div>
+                                    <div><input type="checkbox"> Option 2</div>
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <div><input type="radio" name="choice"> Choice 1</div>
+                                    <div><input type="radio" name="choice"> Choice 2</div>
+                                </div>
+                                <button type="submit" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 30px; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Complete Contact Form Example</h2>
+                <p>Here's a realistic contact form combining multiple form elements:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Contact Form</div>
+                    <div class="example-code">
+                        <code>&lt;form&gt;
+    &lt;h2&gt;Contact Us&lt;/h2&gt;
+    
+    &lt;label for="name"&gt;Full Name:&lt;/label&gt;
+    &lt;input type="text" id="name" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" required&gt;
+    
+    &lt;label for="subject"&gt;Subject:&lt;/label&gt;
+    &lt;input type="text" id="subject"&gt;
+    
+    &lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea id="message" rows="5"&gt;&lt;/textarea&gt;
+    
+    &lt;input type="checkbox"&gt; Subscribe to newsletter
+    
+    &lt;button type="submit"&gt;Send Message&lt;/button&gt;
+&lt;/form&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <form style="max-width: 400px;">
+                                <h2 style="margin-top: 0;">Contact Us</h2>
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px;">Full Name:</label>
+                                    <input type="text" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px;">Email:</label>
+                                    <input type="email" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px;">Subject:</label>
+                                    <input type="text" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px;">Message:</label>
+                                    <textarea rows="5" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <input type="checkbox"> Subscribe to newsletter
+                                </div>
+                                <button type="submit" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 30px; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>Forms are created with the &lt;form&gt; element</li>
+                    <li>Different &lt;input&gt; types collect different kinds of data</li>
+                    <li>&lt;textarea&gt; is used for multi-line text input</li>
+                    <li>&lt;select&gt; creates dropdown menus</li>
+                    <li>Checkboxes allow multiple selections, radio buttons allow only one</li>
+                    <li>Always use &lt;label&gt; elements to describe form fields for accessibility</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="/pages/html/images.html" class="nav-btn">← Previous</a>
+                <span class="nav-center">Lesson 4 of 5</span>
+                <a href="/pages/html/project.html" class="nav-btn">Next →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/progress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) {
+                fetch('/components/sidebar-html.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        sidebarContainer.innerHTML = html;
+                        document.querySelector('.sidebar a[href="/pages/html/forms.html"]').classList.add('active');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

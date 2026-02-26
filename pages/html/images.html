@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Images & Links - Web School</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="lesson-page">
+        <div id="sidebar-container"></div>
+
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h1>Images & Links in HTML</h1>
+                <p>Learn how to add images and links to your web pages.</p>
+            </div>
+
+            <section>
+                <h2>The Image Element</h2>
+                <p>Images are inserted using the &lt;img&gt; tag, which is self-closing. You must specify the image source with the src attribute.</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Basic Image</div>
+                    <div class="example-code">
+                        <code>&lt;img src="nature.jpg" alt="Beautiful nature landscape"&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px; text-align: center;">
+                            <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 200px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white;">
+                                [Image: Beautiful nature landscape]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Image Attributes</h2>
+                <p>Images support several important attributes:</p>
+
+                <table>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>src</td>
+                        <td>Path to the image file (required)</td>
+                    </tr>
+                    <tr>
+                        <td>alt</td>
+                        <td>Alternative text if image can't load or for accessibility</td>
+                    </tr>
+                    <tr>
+                        <td>width</td>
+                        <td>Image width in pixels</td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>Image height in pixels</td>
+                    </tr>
+                    <tr>
+                        <td>title</td>
+                        <td>Tooltip text shown on hover</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Using Image Attributes</h2>
+                <p>Here are examples of using different image attributes:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Image with Attributes</div>
+                    <div class="example-code">
+                        <code>&lt;!-- Image with width and height --&gt;
+&lt;img src="photo.jpg" alt="My photo" width="300" height="200"&gt;
+
+&lt;!-- Image with title (shows on hover) --&gt;
+&lt;img src="sunset.jpg" alt="Beautiful sunset" title="Click to enlarge"&gt;
+
+&lt;!-- Linking an image --&gt;
+&lt;a href="gallery.html"&gt;
+    &lt;img src="thumbnail.jpg" alt="Gallery preview"&gt;
+&lt;/a&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <p><strong>Image with width and height:</strong></p>
+                            <div style="background: linear-gradient(135deg, #667eea, #764ba2); width: 300px; height: 200px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: 20px;">
+                                [300x200 image]
+                            </div>
+                            <p><strong>Image as a link:</strong></p>
+                            <div style="background: linear-gradient(to bottom, #764ba2, #667eea); width: 150px; height: 100px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer;">
+                                [Clickable thumbnail]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Links in HTML</h2>
+                <p>Links are created using the &lt;a&gt; tag. The href attribute specifies the URL or file to navigate to.</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Creating Links</div>
+                    <div class="example-code">
+                        <code>&lt;!-- External link --&gt;
+&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+
+&lt;!-- Link to another page on the same site --&gt;
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+
+&lt;!-- Link to a specific section --&gt;
+&lt;a href="#section-id"&gt;Jump to Section&lt;/a&gt;
+
+&lt;!-- Link that opens in a new tab --&gt;
+&lt;a href="https://example.com" target="_blank"&gt;Open in New Tab&lt;/a&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <p><a href="#" style="color: #0066cc; text-decoration: underline;">Visit Example</a></p>
+                            <p><a href="#" style="color: #0066cc; text-decoration: underline;">About Us</a></p>
+                            <p><a href="#" style="color: #0066cc; text-decoration: underline;">Jump to Section</a></p>
+                            <p><a href="#" style="color: #0066cc; text-decoration: underline;">Open in New Tab</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Link Attributes</h2>
+                <p>Important attributes for links include:</p>
+
+                <table>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>href</td>
+                        <td>URL or file path the link points to (required)</td>
+                    </tr>
+                    <tr>
+                        <td>target</td>
+                        <td>Where to open the link (_blank for new tab)</td>
+                    </tr>
+                    <tr>
+                        <td>title</td>
+                        <td>Tooltip text shown on hover</td>
+                    </tr>
+                    <tr>
+                        <td>download</td>
+                        <td>Download the file instead of navigating</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Complete Example</h2>
+                <p>Here's a page combining images and links:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Images and Links Together</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1&gt;My Portfolio&lt;/h1&gt;
+    
+    &lt;h2&gt;Project 1&lt;/h2&gt;
+    &lt;img src="project1.jpg" alt="Project 1 preview" width="300"&gt;
+    &lt;p&gt;&lt;a href="project1.html"&gt;View Project&lt;/a&gt;&lt;/p&gt;
+    
+    &lt;h2&gt;Project 2&lt;/h2&gt;
+    &lt;img src="project2.jpg" alt="Project 2 preview" width="300"&gt;
+    &lt;p&gt;&lt;a href="project2.html"&gt;View Project&lt;/a&gt;&lt;/p&gt;
+    
+    &lt;p&gt;&lt;a href="https://github.com" target="_blank"&gt;Visit My GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <h1 style="margin-top: 0;">My Portfolio</h1>
+                            <h2>Project 1</h2>
+                            <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 150px; border-radius: 6px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+                                [Project 1 preview]
+                            </div>
+                            <p><a href="#" style="color: #0066cc;">View Project</a></p>
+                            <h2>Project 2</h2>
+                            <div style="background: linear-gradient(135deg, #764ba2, #667eea); height: 150px; border-radius: 6px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+                                [Project 2 preview]
+                            </div>
+                            <p><a href="#" style="color: #0066cc;">View Project</a></p>
+                            <p><a href="#" style="color: #0066cc;">Visit My GitHub</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>Use &lt;img&gt; to embed images in web pages</li>
+                    <li>Always include the alt attribute for accessibility</li>
+                    <li>You can control image size with width and height attributes</li>
+                    <li>Use &lt;a&gt; tags to create links to other pages or websites</li>
+                    <li>Links can open in a new tab using target="_blank"</li>
+                    <li>Images can be made clickable by wrapping them in &lt;a&gt; tags</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="/pages/html/elements.html" class="nav-btn">← Previous</a>
+                <span class="nav-center">Lesson 3 of 5</span>
+                <a href="/pages/html/forms.html" class="nav-btn">Next →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/progress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) {
+                fetch('/components/sidebar-html.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        sidebarContainer.innerHTML = html;
+                        document.querySelector('.sidebar a[href="/pages/html/images.html"]').classList.add('active');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

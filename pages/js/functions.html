@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions - Web School</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="lesson-page">
+        <div id="sidebar-container"></div>
+
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h1>JavaScript Functions</h1>
+                <p>Learn how to organize code with functions and reuse logic.</p>
+            </div>
+
+            <section>
+                <h2>What are Functions?</h2>
+                <p>A function is a reusable block of code that performs a specific task. Functions help you organize your code, make it more readable, and avoid repeating the same code multiple times.</p>
+            </section>
+
+            <section>
+                <h2>Creating Functions</h2>
+                <p>You can declare a function using the function keyword:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Basic Function</div>
+                    <div class="example-code">
+                        <code>// Function declaration
+function greet() {
+    console.log("Hello, World!");
+}
+
+// Call the function
+greet();  // Output: Hello, World!
+greet();  // Output: Hello, World!
+
+// Function with parameters
+function greetPerson(name) {
+    console.log("Hello, " + name + "!");
+}
+
+greetPerson("Alice");  // Output: Hello, Alice!
+greetPerson("Bob");    // Output: Hello, Bob!</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output (in console):</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px;">
+                            <p style="margin: 5px 0;">Hello, World!</p>
+                            <p style="margin: 5px 0;">Hello, World!</p>
+                            <p style="margin: 5px 0;">Hello, Alice!</p>
+                            <p style="margin: 5px 0;">Hello, Bob!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Parameters and Return Values</h2>
+                <p>Functions can accept parameters and return values:</p>
+
+                <table>
+                    <tr>
+                        <th>Concept</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Parameters</td>
+                        <td>Input values for the function</td>
+                        <td>function add(a, b)</td>
+                    </tr>
+                    <tr>
+                        <td>Return Value</td>
+                        <td>Output value from the function</td>
+                        <td>return a + b;</td>
+                    </tr>
+                    <tr>
+                        <td>Arguments</td>
+                        <td>Actual values passed to function</td>
+                        <td>add(5, 3)</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Functions with Return Values</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Functions Returning Values</div>
+                    <div class="example-code">
+                        <code>// Function that returns a value
+function add(a, b) {
+    return a + b;
+}
+
+function multiply(x, y) {
+    return x * y;
+}
+
+let result1 = add(5, 3);
+console.log(result1);  // Output: 8
+
+let result2 = multiply(4, 6);
+console.log(result2);  // Output: 24
+
+// Use returned values in operations
+let total = add(10, 20) + multiply(5, 2);
+console.log(total);    // Output: 40
+
+// Function that returns a string
+function createMessage(name, age) {
+    return name + " is " + age + " years old";
+}
+
+let message = createMessage("Alice", 25);
+console.log(message);  // Output: Alice is 25 years old</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output (in console):</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px;">
+                            <p style="margin: 5px 0;">8</p>
+                            <p style="margin: 5px 0;">24</p>
+                            <p style="margin: 5px 0;">40</p>
+                            <p style="margin: 5px 0;">Alice is 25 years old</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Arrow Functions</h2>
+                <p>Arrow functions are a shorter, more modern way to write functions in JavaScript:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Arrow Functions</div>
+                    <div class="example-code">
+                        <code>// Traditional function
+function square(x) {
+    return x * x;
+}
+
+// Arrow function (equivalent)
+const squareArrow = (x) => {
+    return x * x;
+};
+
+// Shortened arrow function
+const double = (x) => x * 2;
+
+console.log(square(5));     // Output: 25
+console.log(squareArrow(5)); // Output: 25
+console.log(double(5));     // Output: 10
+
+// Arrow function with no parameters
+const greet = () => "Hello!";
+console.log(greet());       // Output: Hello!</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output (in console):</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px;">
+                            <p style="margin: 5px 0;">25</p>
+                            <p style="margin: 5px 0;">25</p>
+                            <p style="margin: 5px 0;">10</p>
+                            <p style="margin: 5px 0;">Hello!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Interactive Function Example</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Interactive Calculator with Functions</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h2&gt;Simple Calculator&lt;/h2&gt;
+    &lt;input type="number" id="a" placeholder="Number 1"&gt;
+    &lt;input type="number" id="b" placeholder="Number 2"&gt;
+    &lt;button onclick="showSum()"&gt;Add&lt;/button&gt;
+    &lt;button onclick="showProduct()"&gt;Multiply&lt;/button&gt;
+    &lt;p id="output"&gt;&lt;/p&gt;
+
+    &lt;script&gt;
+        function add(x, y) {
+            return x + y;
+        }
+
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        function showSum() {
+            let num1 = Number(document.getElementById("a").value);
+            let num2 = Number(document.getElementById("b").value);
+            document.getElementById("output").innerHTML = 
+                num1 + " + " + num2 + " = " + add(num1, num2);
+        }
+
+        function showProduct() {
+            let num1 = Number(document.getElementById("a").value);
+            let num2 = Number(document.getElementById("b").value);
+            document.getElementById("output").innerHTML = 
+                num1 + " × " + num2 + " = " + multiply(num1, num2);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <h3 style="margin-top: 0;">Simple Calculator</h3>
+                            <input type="number" placeholder="Number 1" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 10px; width: 100%; max-width: 200px; display: block;">
+                            <input type="number" placeholder="Number 2" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 10px; width: 100%; max-width: 200px; display: block;">
+                            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 8px 20px; border: none; border-radius: 4px; cursor: pointer; margin-right: 10px; margin-bottom: 15px;">Add</button>
+                            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 8px 20px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 15px;">Multiply</button>
+                            <p style="color: #666; font-size: 14px; margin-top: 0;">Enter numbers and click a button to see results</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>Functions are reusable blocks of code that perform specific tasks</li>
+                    <li>Functions can accept parameters and return values</li>
+                    <li>Arrow functions provide a shorter syntax for writing functions</li>
+                    <li>Use functions to organize and simplify your code</li>
+                    <li>Functions make code more maintainable and reusable</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="/pages/js/variables.html" class="nav-btn">← Previous</a>
+                <span class="nav-center">Lesson 3 of 5</span>
+                <a href="/pages/js/dom.html" class="nav-btn">Next →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/progress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) {
+                fetch('/components/sidebar-js.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        sidebarContainer.innerHTML = html;
+                        document.querySelector('.sidebar a[href="/pages/js/functions.html"]').classList.add('active');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

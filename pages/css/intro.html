@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Introduction - Web School</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="lesson-page">
+        <div id="sidebar-container"></div>
+
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h1>CSS Introduction</h1>
+                <p>Learn how to style HTML elements with CSS.</p>
+            </div>
+
+            <section>
+                <h2>What is CSS?</h2>
+                <p>CSS stands for Cascading Style Sheets. It is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.</p>
+                <p>If HTML is the skeleton, CSS is the skin, clothes, and makeup of the web page.</p>
+            </section>
+
+            <section>
+                <h2>Three Ways to Add CSS</h2>
+                <p>There are three main ways to add CSS to your HTML:</p>
+
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Location</th>
+                        <th>Use Case</th>
+                    </tr>
+                    <tr>
+                        <td>Inline CSS</td>
+                        <td>Inside HTML elements</td>
+                        <td>Quick styling for one element</td>
+                    </tr>
+                    <tr>
+                        <td>Internal CSS</td>
+                        <td>In &lt;style&gt; tag in &lt;head&gt;</td>
+                        <td>Styling for one page</td>
+                    </tr>
+                    <tr>
+                        <td>External CSS</td>
+                        <td>In separate .css file</td>
+                        <td>Styling for entire website (recommended)</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>CSS Syntax</h2>
+                <p>CSS uses a simple syntax with selectors and properties:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Basic CSS Syntax</div>
+                    <div class="example-code">
+                        <code>/* This is a comment */
+h1 {
+    color: blue;
+    font-size: 28px;
+    text-align: center;
+}
+
+p {
+    color: gray;
+    line-height: 1.6;
+}</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <h1 style="color: blue; text-align: center; margin-top: 0;">This is a heading</h1>
+                            <p style="color: gray; line-height: 1.6;">This is a paragraph. Notice the gray color and increased line-height for better readability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Key Components:</h3>
+                <ul style="color: var(--text-secondary);">
+                    <li><strong>Selector</strong> - Element to style (h1, p, etc.)</li>
+                    <li><strong>Property</strong> - What to change (color, size, etc.)</li>
+                    <li><strong>Value</strong> - What to change it to (blue, 28px, etc.)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>CSS Selectors</h2>
+                <p>CSS selectors are patterns used to select the elements you want to style:</p>
+
+                <table>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Example</th>
+                        <th>Selects</th>
+                    </tr>
+                    <tr>
+                        <td>Element</td>
+                        <td>p { }</td>
+                        <td>All &lt;p&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td>Class</td>
+                        <td>.blue { }</td>
+                        <td>All elements with class="blue"</td>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td>#header { }</td>
+                        <td>Element with id="header"</td>
+                    </tr>
+                    <tr>
+                        <td>Universal</td>
+                        <td>* { }</td>
+                        <td>All elements</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Using Different Selectors</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Different CSS Selectors</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        /* Element selector */
+        h1 {
+            color: blue;
+        }
+        
+        /* Class selector */
+        .highlight {
+            background: yellow;
+        }
+        
+        /* ID selector */
+        #main {
+            margin: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Main Title&lt;/h1&gt;
+    &lt;p class="highlight"&gt;This text is highlighted&lt;/p&gt;
+    &lt;div id="main"&gt;Main content here&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <h1 style="color: blue; margin-top: 0;">Main Title</h1>
+                            <p style="background: yellow;">This text is highlighted</p>
+                            <div style="margin: 20px; background: #f5f5f5; padding: 15px; border-radius: 4px;">Main content here</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Common CSS Properties</h2>
+                <p>Here are some of the most commonly used CSS properties:</p>
+
+                <table>
+                    <tr>
+                        <th>Property</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>color</td>
+                        <td>Text color</td>
+                        <td>color: red;</td>
+                    </tr>
+                    <tr>
+                        <td>background-color</td>
+                        <td>Background color</td>
+                        <td>background-color: blue;</td>
+                    </tr>
+                    <tr>
+                        <td>font-size</td>
+                        <td>Text size</td>
+                        <td>font-size: 20px;</td>
+                    </tr>
+                    <tr>
+                        <td>font-family</td>
+                        <td>Font type</td>
+                        <td>font-family: Arial, sans-serif;</td>
+                    </tr>
+                    <tr>
+                        <td>text-align</td>
+                        <td>Text alignment</td>
+                        <td>text-align: center;</td>
+                    </tr>
+                    <tr>
+                        <td>margin</td>
+                        <td>Outer spacing</td>
+                        <td>margin: 10px;</td>
+                    </tr>
+                    <tr>
+                        <td>padding</td>
+                        <td>Inner spacing</td>
+                        <td>padding: 15px;</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Using Common Properties</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Common CSS Properties</div>
+                    <div class="example-code">
+                        <code>body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+    font-size: 32px;
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+}</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: #f5f5f5; color: #333; padding: 20px; border-radius: 6px;">
+                            <h1 style="text-align: center; font-size: 32px; color: #333; margin-top: 0;">Beautiful Styling</h1>
+                            <div style="background: white; padding: 20px; margin: 10px 0; border-radius: 8px;">
+                                This is a styled card with padding, margin, and border-radius.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>CSS is used to style and layout web pages</li>
+                    <li>CSS has three main methods: inline, internal, and external</li>
+                    <li>CSS uses selectors to target HTML elements</li>
+                    <li>CSS properties control appearance like color, size, and spacing</li>
+                    <li>External CSS files are the best practice for larger projects</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <span class="nav-center">Start of CSS Course</span>
+                <a href="/pages/css/boxmodel.html" class="nav-btn">Next Lesson →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/progress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) {
+                fetch('/components/sidebar-css.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        sidebarContainer.innerHTML = html;
+                        document.querySelector('.sidebar a[href="/pages/css/intro.html"]').classList.add('active');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

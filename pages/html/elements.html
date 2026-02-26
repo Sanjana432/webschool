@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements - Web School</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="lesson-page">
+        <div id="sidebar-container"></div>
+
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h1>HTML Elements & Semantic Markup</h1>
+                <p>Master HTML elements and learn how to use semantic HTML for better structure.</p>
+            </div>
+
+            <section>
+                <h2>Understanding HTML Elements</h2>
+                <p>An HTML element consists of a start tag, content, and an end tag. Some elements are self-closing and don't have content.</p>
+
+                <div class="example">
+                    <div class="example-header">Example: HTML Element Structure</div>
+                    <div class="example-code">
+                        <code>&lt;tagname&gt;Content goes here&lt;/tagname&gt;
+
+&lt;!-- Examples --&gt;
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;img src="image.jpg" alt="An image"&gt; &lt;!-- Self-closing --&gt;
+&lt;br&gt; &lt;!-- Line break --&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <h1 style="margin-top: 0;">This is a heading</h1>
+                            <p>This is a paragraph</p>
+                            <p style="margin: 0;"><em>Image would appear here</em></p>
+                            <p style="margin-top: 10px;">Line break appears above</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Text Formatting Elements</h2>
+                <p>HTML provides elements for formatting text with different meanings and appearances:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Text Formatting</div>
+                    <div class="example-code">
+                        <code>&lt;p&gt;
+    This is &lt;strong&gt;important&lt;/strong&gt; text.
+&lt;/p&gt;
+&lt;p&gt;
+    This is &lt;em&gt;emphasized&lt;/em&gt; text.
+&lt;/p&gt;
+&lt;p&gt;
+    This is &lt;b&gt;bold&lt;/b&gt; text.
+&lt;/p&gt;
+&lt;p&gt;
+    This is &lt;i&gt;italic&lt;/i&gt; text.
+&lt;/p&gt;
+&lt;p&gt;
+    This is &lt;mark&gt;highlighted&lt;/mark&gt; text.
+&lt;/p&gt;
+&lt;p&gt;
+    This is &lt;code&gt;code&lt;/code&gt; text.
+&lt;/p&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <p>This is <strong>important</strong> text.</p>
+                            <p>This is <em>emphasized</em> text.</p>
+                            <p>This is <b>bold</b> text.</p>
+                            <p>This is <i>italic</i> text.</p>
+                            <p>This is <mark>highlighted</mark> text.</p>
+                            <p>This is <code>code</code> text.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Semantic HTML Elements</h2>
+                <p>Semantic elements clearly describe their meaning to the browser and to developers. They improve accessibility and SEO:</p>
+
+                <table>
+                    <tr>
+                        <th>Element</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;header&gt;</td>
+                        <td>Introductory content or navigation</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;nav&gt;</td>
+                        <td>Navigation links</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;main&gt;</td>
+                        <td>Main content of the page</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;article&gt;</td>
+                        <td>Self-contained content (blog post, news article)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;section&gt;</td>
+                        <td>Thematic grouping of content</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;aside&gt;</td>
+                        <td>Content tangentially related to main content</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;footer&gt;</td>
+                        <td>Footer information (copyright, links)</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Semantic Page Structure</h2>
+                <p>Here's how to structure a complete web page using semantic elements:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Semantic Page Layout</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;My Website&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="/"&gt;Home&lt;/a&gt;
+            &lt;a href="/about"&gt;About&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Blog Post Title&lt;/h2&gt;
+            &lt;p&gt;Blog content here...&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2024 My Website&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output Structure:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <div style="background: #f0f0f0; padding: 15px; margin-bottom: 10px; border-radius: 4px;">
+                                <strong>&lt;header&gt;</strong>
+                                <h3 style="margin: 10px 0;">My Website</h3>
+                                <div style="background: #e0e0e0; padding: 10px;">Home | About</div>
+                            </div>
+                            <div style="background: #f0f0f0; padding: 15px; margin-bottom: 10px; border-radius: 4px;">
+                                <strong>&lt;main&gt;</strong>
+                                <h3 style="margin: 10px 0;">Blog Post Title</h3>
+                                <p>Blog content here...</p>
+                            </div>
+                            <div style="background: #f0f0f0; padding: 15px; border-radius: 4px;">
+                                <strong>&lt;footer&gt;</strong>
+                                <p style="margin: 0;">© 2024 My Website</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>HTML elements provide structure through tags</li>
+                    <li>Use text formatting elements for meaning: &lt;strong&gt;, &lt;em&gt;, &lt;mark&gt;</li>
+                    <li>Semantic elements improve accessibility and SEO</li>
+                    <li>Use &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt; for page structure</li>
+                    <li>Semantic HTML makes code more readable and maintainable</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="/pages/html/intro.html" class="nav-btn">← Previous</a>
+                <span class="nav-center">Lesson 2 of 5</span>
+                <a href="/pages/html/images.html" class="nav-btn">Next →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/progress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) {
+                fetch('/components/sidebar-html.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        sidebarContainer.innerHTML = html;
+                        document.querySelector('.sidebar a[href="/pages/html/elements.html"]').classList.add('active');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

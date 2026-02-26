@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM - Web School</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="lesson-page">
+        <div id="sidebar-container"></div>
+
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h1>JavaScript & the DOM</h1>
+                <p>Learn how to interact with and manipulate HTML elements using JavaScript.</p>
+            </div>
+
+            <section>
+                <h2>What is the DOM?</h2>
+                <p>The DOM (Document Object Model) is a programming interface that represents the HTML document as a tree of objects. It allows JavaScript to dynamically access and modify the content, structure, and style of HTML pages.</p>
+            </section>
+
+            <section>
+                <h2>Accessing Elements</h2>
+                <p>There are several ways to access HTML elements from JavaScript:</p>
+
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>getElementById()</td>
+                        <td>Get element by ID</td>
+                        <td>getElementById("myId")</td>
+                    </tr>
+                    <tr>
+                        <td>querySelector()</td>
+                        <td>Get first element matching selector</td>
+                        <td>querySelector(".myClass")</td>
+                    </tr>
+                    <tr>
+                        <td>querySelectorAll()</td>
+                        <td>Get all elements matching selector</td>
+                        <td>querySelectorAll("p")</td>
+                    </tr>
+                    <tr>
+                        <td>getElementsByClassName()</td>
+                        <td>Get elements by class name</td>
+                        <td>getElementsByClassName("myClass")</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Accessing and Modifying Content</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Getting and Setting Element Content</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1 id="title"&gt;Original Title&lt;/h1&gt;
+    &lt;p class="text"&gt;This is a paragraph&lt;/p&gt;
+    &lt;button onclick="changeContent()"&gt;Change Content&lt;/button&gt;
+
+    &lt;script&gt;
+        function changeContent() {
+            // Get element by ID
+            document.getElementById("title").innerHTML = "New Title!";
+            
+            // Get first element with class
+            document.querySelector(".text").innerHTML = 
+                "This paragraph has been changed!";
+            
+            // Get text content (without HTML tags)
+            let text = document.querySelector(".text").textContent;
+            console.log(text);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Before clicking:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px; margin-bottom: 15px;">
+                            <h1 id="title-before" style="margin: 0;">Original Title</h1>
+                            <p id="text-before" style="margin: 10px 0;">This is a paragraph</p>
+                            <button onclick="document.getElementById('title-before').innerHTML = 'New Title!'; document.getElementById('text-before').innerHTML = 'This paragraph has been changed!';" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 8px 20px; border: none; border-radius: 4px; cursor: pointer;">Change Content</button>
+                        </div>
+
+                        <h4>After clicking:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <h1 style="margin: 0; color: #667eea;">New Title!</h1>
+                            <p style="margin: 10px 0;">This paragraph has been changed!</p>
+                            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 8px 20px; border: none; border-radius: 4px; cursor: pointer;">Change Content</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Modifying Styles</h2>
+                <p>You can change an element's style dynamically using JavaScript:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Changing Styles</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;div id="box"&gt;Click to change color&lt;/div&gt;
+    &lt;button onclick="changeStyle()"&gt;Change Style&lt;/button&gt;
+
+    &lt;script&gt;
+        function changeStyle() {
+            let box = document.getElementById("box");
+            
+            // Change multiple styles
+            box.style.backgroundColor = "#667eea";
+            box.style.color = "white";
+            box.style.padding = "20px";
+            box.style.fontSize = "18px";
+            box.style.borderRadius = "8px";
+            box.style.textAlign = "center";
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <div id="style-box" style="padding: 15px; background: #f5f5f5; border: 2px solid #ccc; text-align: center; margin-bottom: 15px;">
+                                Click to change color
+                            </div>
+                            <button onclick="document.getElementById('style-box').style.backgroundColor = '#667eea'; document.getElementById('style-box').style.color = 'white'; document.getElementById('style-box').style.borderRadius = '8px';" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 8px 20px; border: none; border-radius: 4px; cursor: pointer;">Change Style</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Event Listeners</h2>
+                <p>Event listeners allow you to respond to user actions like clicks, typing, and mouse movements:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Using Event Listeners</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;button id="myButton"&gt;Click Me&lt;/button&gt;
+    &lt;input id="myInput" placeholder="Type something"&gt;
+    &lt;p id="output"&gt;&lt;/p&gt;
+
+    &lt;script&gt;
+        // Click event
+        document.getElementById("myButton").addEventListener("click", function() {
+            document.getElementById("output").innerHTML = "Button was clicked!";
+        });
+        
+        // Input event
+        document.getElementById("myInput").addEventListener("input", function() {
+            document.getElementById("output").innerHTML = 
+                "You typed: " + this.value;
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <button id="demo-button" onclick="document.getElementById('demo-output').innerHTML = 'Button was clicked!';" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 8px 20px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 15px;">Click Me</button>
+                            <input id="demo-input" placeholder="Type something" oninput="document.getElementById('demo-output').innerHTML = 'You typed: ' + this.value;" style="display: block; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 15px; width: 100%; max-width: 300px;">
+                            <p id="demo-output" style="color: #666; font-size: 14px;">Type or click to see output</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Creating and Removing Elements</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Creating and Removing Elements</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;div id="list"&gt;&lt;/div&gt;
+    &lt;button onclick="addItem()"&gt;Add Item&lt;/button&gt;
+    &lt;button onclick="removeItem()"&gt;Remove Item&lt;/button&gt;
+
+    &lt;script&gt;
+        let count = 0;
+
+        function addItem() {
+            count++;
+            let item = document.createElement("div");
+            item.innerHTML = "Item " + count;
+            item.id = "item" + count;
+            item.style.padding = "10px";
+            item.style.margin = "5px 0";
+            item.style.background = "#f5f5f5";
+            document.getElementById("list").appendChild(item);
+        }
+
+        function removeItem() {
+            let item = document.getElementById("item" + count);
+            if (item) {
+                item.remove();
+                count--;
+            }
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <div id="demo-list" style="margin-bottom: 15px; min-height: 50px;"></div>
+                            <button onclick="(function() { let count = document.getElementById('demo-list').children.length + 1; let item = document.createElement('div'); item.innerHTML = 'Item ' + count; item.style.padding = '10px'; item.style.margin = '5px 0'; item.style.background = '#f5f5f5'; item.style.borderRadius = '4px'; document.getElementById('demo-list').appendChild(item); })();" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 8px 20px; border: none; border-radius: 4px; cursor: pointer; margin-right: 10px; margin-bottom: 15px;">Add Item</button>
+                            <button onclick="let items = document.getElementById('demo-list').children; if (items.length > 0) { items[items.length - 1].remove(); }" style="background: linear-gradient(135deg, #764ba2, #667eea); color: white; padding: 8px 20px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 15px;">Remove Item</button>
+                            <p style="color: #666; font-size: 12px; margin: 0;">Click the buttons to add or remove items from the list above</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>The DOM represents HTML as a tree of objects</li>
+                    <li>Use methods like getElementById() and querySelector() to access elements</li>
+                    <li>You can modify element content with innerHTML and textContent</li>
+                    <li>Use style property to change element styles dynamically</li>
+                    <li>addEventListener() allows you to respond to user interactions</li>
+                    <li>You can create and remove elements dynamically with JavaScript</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="/pages/js/functions.html" class="nav-btn">← Previous</a>
+                <span class="nav-center">Lesson 4 of 5</span>
+                <a href="/pages/js/project.html" class="nav-btn">Next →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/progress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) {
+                fetch('/components/sidebar-js.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        sidebarContainer.innerHTML = html;
+                        document.querySelector('.sidebar a[href="/pages/js/dom.html"]').classList.add('active');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Introduction - Web School</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="lesson-page">
+        <div id="sidebar-container"></div>
+
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h1>JavaScript Introduction</h1>
+                <p>Learn the basics of JavaScript and how to add interactivity to web pages.</p>
+            </div>
+
+            <section>
+                <h2>What is JavaScript?</h2>
+                <p>JavaScript is a programming language that runs in the web browser. It allows you to add interactivity to web pages - like responding to user clicks, validating form data, animating elements, and much more.</p>
+                <p>If HTML is the skeleton and CSS is the skin, JavaScript is the brain and movement of your web page.</p>
+            </section>
+
+            <section>
+                <h2>Three Ways to Add JavaScript</h2>
+                <p>There are three main ways to include JavaScript in your HTML:</p>
+
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Location</th>
+                        <th>Use Case</th>
+                    </tr>
+                    <tr>
+                        <td>Inline JavaScript</td>
+                        <td>In HTML attributes like onclick</td>
+                        <td>Quick interactions on one element</td>
+                    </tr>
+                    <tr>
+                        <td>Internal JavaScript</td>
+                        <td>In &lt;script&gt; tag in HTML</td>
+                        <td>JavaScript for one page</td>
+                    </tr>
+                    <tr>
+                        <td>External JavaScript</td>
+                        <td>In separate .js file</td>
+                        <td>JavaScript for entire website (recommended)</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Your First JavaScript Program</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Hello World with JavaScript</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;JavaScript Example&lt;/h1&gt;
+    
+    &lt;script&gt;
+        console.log("Hello, World!");
+        document.write("Hello from JavaScript!");
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output:</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <h1 style="margin: 0;">JavaScript Example</h1>
+                            <p style="color: #666; margin-top: 15px;">Hello from JavaScript!</p>
+                            <p style="color: #999; font-size: 12px; margin-top: 10px;">(Check browser console for "Hello, World!")</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>JavaScript Syntax Basics</h2>
+                <p>JavaScript code is organized into statements and blocks:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Basic JavaScript Syntax</div>
+                    <div class="example-code">
+                        <code>// This is a comment - single line
+/* This is a multi-line
+   comment */
+
+// Statements end with semicolons
+var name = "John";
+var age = 25;
+
+// Logs to console
+console.log("Name: " + name);
+console.log("Age: " + age);
+
+// Mathematical operations
+var sum = 10 + 5;
+var product = 10 * 5;
+console.log(sum);      // Output: 15
+console.log(product);  // Output: 50</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output (in console):</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px;">
+                            <p style="margin: 5px 0;">Name: John</p>
+                            <p style="margin: 5px 0;">Age: 25</p>
+                            <p style="margin: 5px 0;">15</p>
+                            <p style="margin: 5px 0;">50</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Interacting with HTML</h2>
+                <p>JavaScript can interact with HTML elements and change the page dynamically:</p>
+
+                <div class="example">
+                    <div class="example-header">Example: Changing HTML Content</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1 id="title"&gt;Original Title&lt;/h1&gt;
+    &lt;p id="message"&gt;Original message&lt;/p&gt;
+    
+    &lt;button onclick="changeContent()"&gt;Click Me&lt;/button&gt;
+
+    &lt;script&gt;
+        function changeContent() {
+            document.getElementById("title").innerHTML = "Title Changed!";
+            document.getElementById("message").innerHTML = "Message changed with JavaScript!";
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output (before click):</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px; margin-bottom: 15px;">
+                            <h1 style="margin: 0;">Original Title</h1>
+                            <p style="margin: 10px 0;">Original message</p>
+                            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Click Me</button>
+                        </div>
+
+                        <h4>Output (after click):</h4>
+                        <div style="background: white; color: #333; padding: 20px; border-radius: 6px;">
+                            <h1 style="margin: 0; color: #667eea;">Title Changed!</h1>
+                            <p style="margin: 10px 0;">Message changed with JavaScript!</p>
+                            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Click Me</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Common Output Methods</h2>
+                <p>There are several ways to output data in JavaScript:</p>
+
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>console.log()</td>
+                        <td>Output to console</td>
+                        <td>console.log("text")</td>
+                    </tr>
+                    <tr>
+                        <td>document.write()</td>
+                        <td>Write to HTML page</td>
+                        <td>document.write("text")</td>
+                    </tr>
+                    <tr>
+                        <td>innerHTML</td>
+                        <td>Change element content</td>
+                        <td>element.innerHTML = "text"</td>
+                    </tr>
+                    <tr>
+                        <td>alert()</td>
+                        <td>Show popup message</td>
+                        <td>alert("message")</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>JavaScript adds interactivity and dynamic behavior to web pages</li>
+                    <li>JavaScript can be added inline, internal, or external</li>
+                    <li>JavaScript statements end with semicolons</li>
+                    <li>JavaScript can interact with HTML elements</li>
+                    <li>The DOM (Document Object Model) allows you to access and modify HTML</li>
+                    <li>There are multiple ways to output data in JavaScript</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <span class="nav-center">Start of JavaScript Course</span>
+                <a href="/pages/js/variables.html" class="nav-btn">Next Lesson →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/progress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) {
+                fetch('/components/sidebar-js.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        sidebarContainer.innerHTML = html;
+                        document.querySelector('.sidebar a[href="/pages/js/intro.html"]').classList.add('active');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Project - Web School</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="lesson-page">
+        <div id="sidebar-container"></div>
+
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h1>CSS Project: Responsive Card Layout</h1>
+                <p>Build a beautiful, responsive card layout using CSS Flexbox or Grid.</p>
+            </div>
+
+            <section>
+                <h2>Project Overview</h2>
+                <p>In this project, you'll create a professional product showcase layout with cards that display nicely on all screen sizes. This will combine everything you've learned about CSS layouts, spacing, and responsive design.</p>
+            </section>
+
+            <section>
+                <h2>Project Requirements</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>A header section with title and description</li>
+                    <li>A responsive card grid that displays 3 cards on desktop, 2 on tablet, 1 on mobile</li>
+                    <li>Each card should have an image area, title, description, and a button</li>
+                    <li>Use the box model for proper spacing (margin, padding, border)</li>
+                    <li>Style the cards with colors, shadows, and rounded corners</li>
+                    <li>Add hover effects to cards for interactivity</li>
+                    <li>Use media queries for responsive breakpoints</li>
+                    <li>Include a footer section</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Complete Project Example</h2>
+
+                <div class="example">
+                    <div class="example-header">Example: Responsive Card Layout Project</div>
+                    <div class="example-code">
+                        <code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Product Showcase&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Card Grid Layout */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .card-button {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .card-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .cards-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 40px 20px;
+                margin-bottom: 30px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+
+            .card-content {
+                padding: 20px;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;div class="container"&gt;
+            &lt;h1&gt;Our Products&lt;/h1&gt;
+            &lt;p&gt;Check out our amazing collection of high-quality products&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class="container"&gt;
+        &lt;div class="cards-container"&gt;
+            &lt;div class="card"&gt;
+                &lt;div class="card-image"&gt;Product Image 1&lt;/div&gt;
+                &lt;div class="card-content"&gt;
+                    &lt;h2&gt;Product 1&lt;/h2&gt;
+                    &lt;p&gt;This is a high-quality product designed to meet your needs. Featuring excellent craftsmanship and superior design.&lt;/p&gt;
+                    &lt;button class="card-button"&gt;Learn More&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="card"&gt;
+                &lt;div class="card-image"&gt;Product Image 2&lt;/div&gt;
+                &lt;div class="card-content"&gt;
+                    &lt;h2&gt;Product 2&lt;/h2&gt;
+                    &lt;p&gt;Experience premium quality with this innovative product. Perfect for professionals and enthusiasts alike.&lt;/p&gt;
+                    &lt;button class="card-button"&gt;Learn More&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="card"&gt;
+                &lt;div class="card-image"&gt;Product Image 3&lt;/div&gt;
+                &lt;div class="card-content"&gt;
+                    &lt;h2&gt;Product 3&lt;/h2&gt;
+                    &lt;p&gt;Discover excellence in every detail. This product combines style and functionality for optimal performance.&lt;/p&gt;
+                    &lt;button class="card-button"&gt;Learn More&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;div class="container"&gt;
+            &lt;p&gt;&amp;copy; 2024 Product Showcase. All rights reserved.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </div>
+                    <div class="example-output">
+                        <h4>Output - Desktop View:</h4>
+                        <div style="background: white; border-radius: 6px; overflow: hidden;">
+                            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 40px 20px; text-align: center;">
+                                <h1 style="margin: 0 0 10px 0; font-size: 36px;">Our Products</h1>
+                                <p style="margin: 0; font-size: 16px;">Check out our amazing collection of high-quality products</p>
+                            </div>
+                            <div style="padding: 20px; background: #f5f5f5;">
+                                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                                        <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 12px;">Product Image 1</div>
+                                        <div style="padding: 20px;">
+                                            <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #333;">Product 1</h3>
+                                            <p style="font-size: 13px; color: #666; margin: 0 0 15px 0; line-height: 1.5;">High-quality product designed to meet your needs with excellent craftsmanship.</p>
+                                            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600;">Learn More</button>
+                                        </div>
+                                    </div>
+                                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                                        <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #764ba2, #667eea); display: flex; align-items: center; justify-content: center; color: white; font-size: 12px;">Product Image 2</div>
+                                        <div style="padding: 20px;">
+                                            <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #333;">Product 2</h3>
+                                            <p style="font-size: 13px; color: #666; margin: 0 0 15px 0; line-height: 1.5;">Premium quality innovative product perfect for professionals and enthusiasts.</p>
+                                            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600;">Learn More</button>
+                                        </div>
+                                    </div>
+                                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                                        <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 12px;">Product Image 3</div>
+                                        <div style="padding: 20px;">
+                                            <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #333;">Product 3</h3>
+                                            <p style="font-size: 13px; color: #666; margin: 0 0 15px 0; line-height: 1.5;">Excellence in every detail combining style and functionality for optimal performance.</p>
+                                            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600;">Learn More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Challenge Ideas</h2>
+                <p>Extend your project with these ideas:</p>
+                <ul style="color: var(--text-secondary);">
+                    <li>Add smooth animations when cards appear on page load</li>
+                    <li>Create a filter system to sort products by category</li>
+                    <li>Add a cart icon with animation when button is clicked</li>
+                    <li>Include a price display on each card</li>
+                    <li>Add a star rating system</li>
+                    <li>Create a featured products section at the top</li>
+                    <li>Add a testimonials or reviews section</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Styling Tips</h2>
+                <ul style="color: var(--text-secondary);">
+                    <li>Use gradients for visual appeal (background gradients on headers and buttons)</li>
+                    <li>Add box-shadow for depth and dimension</li>
+                    <li>Use border-radius for modern, rounded corners</li>
+                    <li>Add transition effects for smooth interactions</li>
+                    <li>Use grid or flexbox for flexible layouts</li>
+                    <li>Test with media queries at 768px (tablet) and 480px (mobile) breakpoints</li>
+                    <li>Keep consistent spacing using the box model (margin and padding)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Next Steps</h2>
+                <p>Congratulations on completing the CSS course! You now have strong foundational knowledge of styling web pages. Next, you'll move on to JavaScript to add interactivity and dynamic behavior to your websites.</p>
+                <div style="background: rgba(102, 126, 234, 0.1); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; margin-top: 20px;">
+                    <a href="/pages/js/intro.html" class="btn btn-primary">Proceed to JavaScript Course →</a>
+                </div>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="/pages/css/grid.html" class="nav-btn">← Previous</a>
+                <span class="nav-center">Lesson 5 of 5 - CSS Complete!</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/progress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarContainer = document.getElementById('sidebar-container');
+            if (sidebarContainer) {
+                fetch('/components/sidebar-css.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        sidebarContainer.innerHTML = html;
+                        document.querySelector('.sidebar a[href="/pages/css/project.html"]').classList.add('active');
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
