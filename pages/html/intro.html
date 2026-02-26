@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Introduction - Web School</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
     <div id="navbar-container"></div>
@@ -145,7 +145,7 @@
 
                 <div style="background: rgba(102, 126, 234, 0.1); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; margin-top: 30px;">
                     <h3 style="margin-top: 0; color: var(--accent-color);">Try It Yourself</h3>
-                    <p>Head over to our <a href="/tryit.html" style="color: var(--accent-color);">interactive code editor</a> and try creating your own HTML page!</p>
+                    <p>Head over to our <a href="../../tryit.html" style="color: var(--accent-color);">interactive code editor</a> and try creating your own HTML page!</p>
                 </div>
             </section>
 
@@ -162,7 +162,7 @@
 
             <div class="lesson-nav">
                 <span class="nav-center">Start of Course</span>
-                <a href="/pages/html/elements.html" class="nav-btn">Next Lesson →</a>
+                <a href="../html/elements.html" class="nav-btn">Next Lesson →</a>
             </div>
         </div>
     </div>
@@ -173,17 +173,17 @@
         </div>
     </footer>
 
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/progress.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/progress.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const sidebarContainer = document.getElementById('sidebar-container');
             if (sidebarContainer) {
-                fetch('/components/sidebar-html.html')
+                fetch('../../components/sidebar-html.html')
                     .then(response => response.text())
                     .then(html => {
                         sidebarContainer.innerHTML = html;
-                        document.querySelector('.sidebar a[href="/pages/html/intro.html"]').classList.add('active');
+                        document.querySelector('.sidebar a[href="../html/intro.html"]').classList.add('active');
                     });
             }
         });

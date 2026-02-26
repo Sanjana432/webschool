@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Flexbox - Web School</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
     <div id="navbar-container"></div>
@@ -297,9 +297,9 @@
             </section>
 
             <div class="lesson-nav">
-                <a href="/pages/css/boxmodel.html" class="nav-btn">← Previous</a>
+                <a href="../css/boxmodel.html" class="nav-btn">← Previous</a>
                 <span class="nav-center">Lesson 3 of 5</span>
-                <a href="/pages/css/grid.html" class="nav-btn">Next →</a>
+                <a href="../css/grid.html" class="nav-btn">Next →</a>
             </div>
         </div>
     </div>
@@ -310,17 +310,17 @@
         </div>
     </footer>
 
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/progress.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/progress.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const sidebarContainer = document.getElementById('sidebar-container');
             if (sidebarContainer) {
-                fetch('/components/sidebar-css.html')
+                fetch('../../components/sidebar-css.html')
                     .then(response => response.text())
                     .then(html => {
                         sidebarContainer.innerHTML = html;
-                        document.querySelector('.sidebar a[href="/pages/css/flexbox.html"]').classList.add('active');
+                        document.querySelector('.sidebar a[href="../css/flexbox.html"]').classList.add('active');
                     });
             }
         });
