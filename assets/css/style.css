@@ -852,3 +852,142 @@ table tr:hover {
 .hidden {
     display: none;
 }
+
+/* ==================== 2026 Refresh: Lighter UI + Theme System ==================== */
+:root {
+    --page-bg: linear-gradient(135deg, #f8fbff 0%, #eef4ff 45%, #f5f8ff 100%);
+    --surface-bg: rgba(255, 255, 255, 0.8);
+    --surface-strong: #ffffff;
+    --text-main: #1f2a44;
+    --text-soft: #5c6b8a;
+    --edge: #dbe7ff;
+    --brand-1: #77a5ff;
+    --brand-2: #a38bff;
+    --brand-accent: #69d9ff;
+    --lift-shadow: 0 12px 30px rgba(90, 122, 189, 0.16);
+}
+
+:root[data-theme='dark'] {
+    --page-bg: linear-gradient(135deg, #141b2d 0%, #1f2940 45%, #1a2236 100%);
+    --surface-bg: rgba(28, 37, 59, 0.9);
+    --surface-strong: #25324f;
+    --text-main: #f3f7ff;
+    --text-soft: #bdc8df;
+    --edge: #34425f;
+    --brand-1: #8eb3ff;
+    --brand-2: #b9a9ff;
+    --brand-accent: #8de6ff;
+    --lift-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+body {
+    background: var(--page-bg);
+    color: var(--text-main);
+}
+
+.navbar,
+.sidebar,
+.footer,
+.example,
+.editor-input,
+.editor-output,
+.feature,
+.intro-section {
+    background: var(--surface-bg);
+    border-color: var(--edge);
+}
+
+.navbar-logo,
+.hero h1,
+.lesson-header h1,
+.editor-header h1 {
+    background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle,
+section h2,
+.feature h4,
+.footer-section h4,
+.lesson-header p,
+.editor-header p {
+    color: var(--text-main);
+}
+
+.hero-description,
+.intro-section p,
+.feature p,
+.footer,
+.footer-section a,
+.course-card p,
+.course-topics li,
+.editor-tips li,
+.nav-center {
+    color: var(--text-soft);
+}
+
+.course-card,
+.editor-tips,
+.example-output,
+table,
+.form-group input,
+.form-group textarea,
+.form-group select {
+    background: var(--surface-strong);
+    box-shadow: var(--lift-shadow);
+    border-color: var(--edge);
+}
+
+.btn-primary,
+.level,
+table th {
+    background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+}
+
+.btn-outline,
+.nav-btn,
+.sidebar h3,
+.editor-label,
+.example-header,
+.editor-tips h3,
+.footer-section a:hover {
+    color: var(--brand-2);
+}
+
+.btn-outline,
+.sidebar a:hover,
+.sidebar a.active,
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--brand-accent);
+}
+
+.theme-toggle,
+#scroll-to-top {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid var(--edge);
+    background: var(--surface-strong);
+    color: var(--text-main);
+    box-shadow: var(--lift-shadow);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover,
+#scroll-to-top:hover {
+    transform: translateY(-2px);
+}
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: none;
+    place-items: center;
+    z-index: 999;
+}
