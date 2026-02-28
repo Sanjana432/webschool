@@ -865,6 +865,10 @@ table tr:hover {
     --brand-2: #a38bff;
     --brand-accent: #69d9ff;
     --lift-shadow: 0 12px 30px rgba(90, 122, 189, 0.16);
+    --text-primary: #1f2a44;
+    --text-secondary: #5c6b8a;
+    --dark-bg: #1f2a44;
+    --border-color: #dbe7ff;
 }
 
 :root[data-theme='dark'] {
@@ -878,6 +882,10 @@ table tr:hover {
     --brand-2: #b9a9ff;
     --brand-accent: #8de6ff;
     --lift-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    --text-primary: #f3f7ff;
+    --text-secondary: #bdc8df;
+    --dark-bg: #f3f7ff;
+    --border-color: #34425f;
 }
 
 body {
@@ -912,7 +920,12 @@ section h2,
 .feature h4,
 .footer-section h4,
 .lesson-header p,
-.editor-header p {
+.editor-header p,
+.navbar-links a,
+.sidebar a,
+.course-card h3,
+.editor-section h3,
+.form-group label {
     color: var(--text-main);
 }
 
@@ -924,7 +937,10 @@ section h2,
 .course-card p,
 .course-topics li,
 .editor-tips li,
-.nav-center {
+.nav-center,
+.course-topics li,
+.editor-header p,
+.footer-bottom {
     color: var(--text-soft);
 }
 
@@ -976,6 +992,23 @@ table th {
     box-shadow: var(--lift-shadow);
     cursor: pointer;
     transition: transform 0.2s ease;
+}
+
+.btn,
+.feature,
+.course-card,
+.sidebar a,
+.nav-btn,
+.theme-toggle,
+#scroll-to-top {
+    transition: all 0.25s ease;
+}
+
+.example-code code {
+    display: block;
+    white-space: pre;
+    tab-size: 4;
+    line-height: 1.9;
 }
 
 .theme-toggle:hover,
