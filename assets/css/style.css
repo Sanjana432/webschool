@@ -1024,3 +1024,149 @@ table th {
     place-items: center;
     z-index: 999;
 }
+
+/* ==================== 2026 Visual Upgrade ==================== */
+.navbar-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+}
+
+.logo-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    box-shadow: var(--lift-shadow);
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-link {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.auth-link:hover,
+.auth-link.active {
+    background: var(--surface-bg);
+    color: var(--brand-2);
+}
+
+.auth-cta {
+    padding: 10px 14px;
+    font-size: 14px;
+}
+
+.hero-illustration {
+    margin-top: 35px;
+    width: min(100%, 820px);
+    border-radius: 18px;
+    border: 1px solid var(--edge);
+    box-shadow: var(--lift-shadow);
+}
+
+.stats-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.stat-card {
+    display: grid;
+    place-items: center;
+    gap: 4px;
+    padding: 18px;
+    border-radius: 12px;
+    background: var(--surface-strong);
+    border: 1px solid var(--edge);
+    box-shadow: var(--lift-shadow);
+}
+
+.stat-card strong { font-size: 28px; color: var(--brand-2); }
+.stat-card span { color: var(--text-soft); font-size: 14px; }
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.footer-brand img {
+    width: 34px;
+    height: 34px;
+}
+
+/* Auth Page */
+.auth-page {
+    min-height: calc(100vh - 80px);
+    display: grid;
+    place-items: center;
+    padding: 32px 16px;
+}
+
+.auth-shell {
+    width: min(100%, 560px);
+    padding: 0;
+}
+
+.auth-card {
+    background: var(--surface-strong);
+    border: 1px solid var(--edge);
+    border-radius: 16px;
+    box-shadow: var(--lift-shadow);
+    padding: 26px;
+}
+
+.auth-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    background: var(--surface-bg);
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 18px;
+}
+
+.auth-tab {
+    border: 0;
+    background: transparent;
+    color: var(--text-main);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-tab.active {
+    background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+    color: #fff;
+}
+
+.auth-form { display: grid; gap: 10px; }
+.auth-pane p { color: var(--text-soft); margin-bottom: 12px; }
+.auth-feedback { margin-top: 14px; color: var(--brand-2); font-weight: 600; min-height: 24px; }
+
+/* Bigger editor workspace */
+.editor-layout {
+    min-height: 70vh;
+}
+
+#code-input,
+#output-frame {
+    min-height: 62vh;
+}
+
+@media (max-width: 900px) {
+    .navbar-links { gap: 12px; }
+    .auth-cta { display: none; }
+}

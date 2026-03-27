@@ -33,6 +33,13 @@
         });
     }
 
+    function normalizeAssetPaths() {
+        document.querySelectorAll('img[src^="/"]').forEach((image) => {
+            const src = image.getAttribute('src');
+            image.setAttribute('src', toSitePath(src));
+        });
+    }
+
     function highlightActiveNavLink() {
         const currentPath = window.location.pathname;
         const navLinks = document.querySelectorAll('.navbar-links a');
@@ -47,6 +54,9 @@
             document.getElementById('nav-js')?.classList.add('active');
         } else if (currentPath.includes('tryit')) {
             document.getElementById('nav-editor')?.classList.add('active');
+        } else if (currentPath.includes('auth')) {
+            document.getElementById('nav-signin')?.classList.add('active');
+            document.getElementById('nav-signup')?.classList.add('active');
         } else {
             document.getElementById('nav-home')?.classList.add('active');
         }
@@ -90,6 +100,25 @@
         }
     }
 
+
+    function enhanceFooterBranding() {
+        document.querySelectorAll('.footer .container').forEach((container) => {
+            const hasFooterContent = container.querySelector('.footer-content');
+            if (hasFooterContent) return;
+
+            if (!container.querySelector('.footer-inline-brand')) {
+                const brand = document.createElement('div');
+                brand.className = 'footer-inline-brand';
+                brand.style.display = 'inline-flex';
+                brand.style.alignItems = 'center';
+                brand.style.gap = '8px';
+                brand.style.marginBottom = '10px';
+                brand.innerHTML = `<img src="${toSitePath('/assets/images/webschool-logo.svg')}" alt="Web School logo" style="width:28px;height:28px;"> <strong>Web School</strong>`;
+                container.prepend(brand);
+            }
+        });
+    }
+
     function setupScrollToTop() {
         const scrollButton = document.createElement('button');
         scrollButton.id = 'scroll-to-top';
@@ -121,9 +150,11 @@
         }
 
         normalizeLinksForHosting();
+        normalizeAssetPaths();
         highlightActiveNavLink();
         highlightActiveSidebarLink();
         setupThemeToggle();
+        enhanceFooterBranding();
         setupScrollToTop();
     });
 })();

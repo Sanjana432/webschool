@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Responsive Design - Web School</title><link rel="stylesheet" href="../../assets/css/style.css"></head><body>
+<div id="navbar-container"></div><div class="lesson-page"><div id="sidebar-container"></div><div class="lesson-content">
+<div class="lesson-header"><h1>Responsive Design</h1><p>Build layouts that adapt beautifully across mobile, tablet, and desktop.</p></div>
+<section><h2>Core Concepts</h2><ul style="color: var(--text-secondary);"><li>Fluid units: %, vw, rem</li><li>Flexible media with max-width: 100%</li><li>Breakpoints using @media</li><li>Mobile-first styling strategy</li></ul></section>
+<section><h2>Media Query Example</h2><div class="example"><div class="example-header">Responsive card grid</div><div class="example-code"><code>.grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr);} }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr;} }</code></div></div></section>
+<div class="lesson-nav"><a href="../css/grid.html" class="nav-btn">← Previous Lesson</a><a href="../css/project.html" class="nav-btn">Next Lesson →</a></div>
+</div></div>
+<footer class="footer"><div class="container"><p>&copy; 2026 Web School. All rights reserved.</p></div></footer>
+<script src="../../assets/js/main.js"></script><script src="../../assets/js/progress.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{fetch('../../components/sidebar-css.html').then(r=>r.text()).then(h=>{document.getElementById('sidebar-container').innerHTML=h;document.querySelector('.sidebar a[href="../css/responsive.html"]')?.classList.add('active');});});</script>
+</body></html>
