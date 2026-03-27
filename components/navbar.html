@@ -1,6 +1,9 @@
 <nav class="navbar">
     <div class="navbar-content">
-        <a href="/" class="navbar-logo">Web School</a>
+        <a href="/" class="navbar-logo">
+            <img src="/assets/images/webschool-logo.svg" alt="Web School logo" class="logo-mark">
+            <span>Web School</span>
+        </a>
         <ul class="navbar-links">
             <li><a href="/" id="nav-home">Home</a></li>
             <li><a href="/pages/html/intro.html" id="nav-html">HTML</a></li>
@@ -8,6 +11,10 @@
             <li><a href="/pages/js/intro.html" id="nav-js">JavaScript</a></li>
             <li><a href="/tryit.html" id="nav-editor">Code Editor</a></li>
         </ul>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">🌙</button>
+        <div class="navbar-actions">
+            <a href="/auth.html?mode=signin" id="nav-signin" class="auth-link">Sign In</a>
+            <a href="/auth.html?mode=signup" id="nav-signup" class="btn btn-primary auth-cta">Sign Up</a>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">🌙</button>
+        </div>
     </div>
 </nav>

@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ES6+ Essentials - Web School</title><link rel="stylesheet" href="../../assets/css/style.css"></head><body>
+<div id="navbar-container"></div><div class="lesson-page"><div id="sidebar-container"></div><div class="lesson-content">
+<div class="lesson-header"><h1>ES6+ Essentials</h1><p>Write cleaner JavaScript with modern syntax and patterns.</p></div>
+<section><h2>Must-Know Features</h2><table><tr><th>Feature</th><th>Why it helps</th></tr><tr><td>let/const</td><td>Safer block-scoped variables</td></tr><tr><td>Arrow functions</td><td>Shorter syntax and lexical this</td></tr><tr><td>Template literals</td><td>Readable string interpolation</td></tr><tr><td>Destructuring</td><td>Extract values quickly</td></tr><tr><td>Spread/rest</td><td>Immutable patterns for arrays/objects</td></tr></table></section>
+<section><h2>Example</h2><div class="example"><div class="example-header">Reusable render function</div><div class="example-code"><code>const users = [{ name: 'Ava', score: 94 }, { name: 'Kai', score: 88 }];
+const markup = users
+  .map(({ name, score }) => `&lt;li&gt;${name}: ${score}&lt;/li&gt;`)
+  .join('');
+document.querySelector('#list').innerHTML = markup;</code></div></div></section>
+<div class="lesson-nav"><a href="../js/dom.html" class="nav-btn">← Previous Lesson</a><a href="../js/project.html" class="nav-btn">Next Lesson →</a></div>
+</div></div>
+<footer class="footer"><div class="container"><p>&copy; 2026 Web School. All rights reserved.</p></div></footer>
+<script src="../../assets/js/main.js"></script><script src="../../assets/js/progress.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{fetch('../../components/sidebar-js.html').then(r=>r.text()).then(h=>{document.getElementById('sidebar-container').innerHTML=h;document.querySelector('.sidebar a[href="../js/es6.html"]')?.classList.add('active');});});</script>
+</body></html>
