@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web School - Code Editor</title>
+    <title>Web School - Code Studio</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -12,48 +12,36 @@
     <main class="editor-page">
         <div class="editor-container">
             <div class="editor-header">
-                <h1>Interactive Code Editor</h1>
-                <p>Write HTML, CSS, and JavaScript code below and see the result in real-time</p>
+                <h1>Interactive Code Studio</h1>
+                <p>Build complete HTML, CSS, and JavaScript prototypes with real-time rendering, curated templates, and workflow guidance.</p>
+            </div>
+
+            <section class="studio-overview">
+                <article class="studio-card">
+                    <h3>Rapid Prototyping</h3>
+                    <p>Start from polished templates and iterate quickly with live output feedback.</p>
+                </article>
+                <article class="studio-card">
+                    <h3>Architecture Thinking</h3>
+                    <p>Organize markup, style systems, and script behavior in one integrated workspace.</p>
+                </article>
+                <article class="studio-card">
+                    <h3>Production Workflow</h3>
+                    <p>Use run, reset, and starter presets to validate ideas and compare implementations.</p>
+                </article>
+            </section>
+
+            <div class="editor-toolbar" role="group" aria-label="Template choices">
+                <span class="toolbar-title">Starter templates:</span>
+                <button class="btn btn-outline template-btn" data-template="landing">Landing Section</button>
+                <button class="btn btn-outline template-btn" data-template="dashboard">Analytics Card</button>
+                <button class="btn btn-outline template-btn" data-template="interactive">Interactive Widget</button>
             </div>
 
             <div class="editor-layout">
                 <div class="editor-input">
                     <div class="editor-label">Code Input</div>
-                    <textarea id="code-input" placeholder="Write your HTML, CSS, and JavaScript here..."><!DOCTYPE html>
-<html>
-<head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        p {
-            color: #666;
-            line-height: 1.6;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to Code Editor</h1>
-        <p>Edit the HTML, CSS, and JavaScript code on the left to see changes here in real-time!</p>
-    </div>
-</body>
-</html></textarea>
+                    <textarea id="code-input" placeholder="Write your HTML, CSS, and JavaScript here..."></textarea>
                     <div class="editor-buttons">
                         <button id="run-btn" class="btn btn-primary">Run Code</button>
                         <button id="reset-btn" class="btn btn-secondary">Reset</button>
@@ -61,19 +49,20 @@
                 </div>
 
                 <div class="editor-output">
-                    <div class="editor-label">Output</div>
-                    <iframe id="output-frame"></iframe>
+                    <div class="editor-label">Live Output</div>
+                    <iframe id="output-frame" title="Code output preview"></iframe>
                 </div>
             </div>
 
             <div class="editor-tips">
-                <h3>Tips for Using the Editor</h3>
+                <h3>Studio Workflow Guide</h3>
                 <ul>
-                    <li>Write complete HTML, CSS, and JavaScript code in the editor</li>
-                    <li>Click "Run Code" to execute your code and see the output</li>
-                    <li>Use the "Reset" button to return to the starter template</li>
-                    <li>You can write pure HTML or include &lt;style&gt; and &lt;script&gt; tags</li>
-                    <li>The output will display in the iframe on the right</li>
+                    <li>Build with semantic HTML first, then layer reusable CSS utilities.</li>
+                    <li>Use CSS variables to keep spacing, color, and typography consistent.</li>
+                    <li>Attach JavaScript by behavior, not by visual styling selectors.</li>
+                    <li>Run frequently and verify interactions in the output panel.</li>
+                    <li>Use Ctrl+Enter (or Cmd+Enter) to run code without leaving the editor.</li>
+                    <li>Use template presets to benchmark implementation quality and speed.</li>
                 </ul>
             </div>
         </div>
