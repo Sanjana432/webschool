@@ -1439,6 +1439,136 @@ section {
     font-size: 14px;
 }
 
+/* ==================== 2026 Final Polish: Theme + Workspace Comfort ==================== */
+:root {
+    --surface-glass: rgba(255, 255, 255, 0.72);
+    --surface-elevated: #ffffff;
+    --soft-border: #d6e4ff;
+    --sidebar-width: 300px;
+}
+
+:root[data-theme='dark'] {
+    --surface-glass: rgba(20, 30, 48, 0.86);
+    --surface-elevated: #1e2a43;
+    --soft-border: #3a4b70;
+}
+
+[data-theme='light'] body {
+    background: linear-gradient(145deg, #f9fbff 0%, #eef4ff 48%, #f4f8ff 100%);
+}
+
+[data-theme='dark'] body {
+    background: linear-gradient(145deg, #0f1728 0%, #17233a 48%, #121b2f 100%);
+}
+
+.navbar,
+.sidebar,
+.editor-toolbar,
+.studio-card,
+.editor-tips,
+.editor-input,
+.editor-output,
+.example,
+.intro-section {
+    background: var(--surface-glass);
+    border-color: var(--soft-border);
+}
+
+.editor-input,
+.editor-output,
+.studio-card,
+.editor-tips,
+.editor-toolbar,
+.sidebar {
+    box-shadow: var(--lift-shadow);
+}
+
+[data-theme='light'] .navbar-links a,
+[data-theme='light'] .sidebar a {
+    color: #314163;
+}
+
+[data-theme='dark'] .navbar-links a,
+[data-theme='dark'] .sidebar a {
+    color: #d9e5ff;
+}
+
+[data-theme='light'] .sidebar a:hover,
+[data-theme='light'] .sidebar a.active {
+    background: rgba(119, 165, 255, 0.18);
+    color: #213052;
+}
+
+[data-theme='dark'] .sidebar a:hover,
+[data-theme='dark'] .sidebar a.active {
+    background: rgba(142, 179, 255, 0.22);
+    color: #ffffff;
+}
+
+.lesson-page {
+    grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+.sidebar {
+    padding: 24px 18px 28px;
+}
+
+.sidebar a {
+    border-radius: 10px;
+    margin-bottom: 6px;
+}
+
+/* Larger, friendlier studio workspace */
+.editor-container {
+    max-width: 1600px;
+    padding: 32px 24px 44px;
+}
+
+.editor-layout {
+    min-height: 76vh;
+    gap: 24px;
+}
+
+#code-input,
+#output-frame {
+    min-height: 68vh;
+}
+
+#code-input {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+[data-theme='light'] #code-input {
+    background: #f9fbff;
+    color: #1c2741;
+}
+
+[data-theme='dark'] #code-input {
+    background: #0d1628;
+    color: #d7e6ff;
+}
+
+[data-theme='dark'] .editor-label,
+[data-theme='dark'] .example-header {
+    background: rgba(142, 179, 255, 0.14);
+}
+
+[data-theme='light'] .editor-label,
+[data-theme='light'] .example-header {
+    background: rgba(119, 165, 255, 0.16);
+}
+
+.editor-buttons {
+    padding: 16px;
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --sidebar-width: 270px;
+    }
+}
+
 .features {
     border-top: 0;
 }
